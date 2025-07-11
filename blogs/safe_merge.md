@@ -9,7 +9,7 @@ SAFEMERGE: PRESERVING SAFETY ALIGNMENT IN FINE-TUNED LARGE LANGUAGE MODELS VIA S
 会选择性地将微调层与安全对齐层进行合并。研究发现相比于其他基线方法，SafeMERGE无需显著牺牲性能，基于模型表征空间引导的逐层选择性合并，有效防止微调后LLM丧失安全性
 的风险
 
-![办法](blogs/pic/pic1.png)
+![办法](pic/pic1.png)
 
 SafeMERGE引入了一个安全对齐子空间，该子空间通过计算基础（未对齐）模型与对齐版本模型（如Llama-2-7B和Llama-2-7B-Chat）之间的权重差异得出。这个包含所有权重内
 积的子空间代表了对齐模型中与安全相关的概念，可用于识别有害任务向量。对于微调LLM中的每一层，若其偏离安全对齐子空间的程度较大，SafeMERGE会将微调模型对应层与安全模
